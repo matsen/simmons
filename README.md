@@ -1,6 +1,6 @@
 # simmons
 
-![](http://www.math.canterbury.ac.nz/matsen/simmons/framed.png)
+![](https://raw.githubusercontent.com/matsen/simmons/master/extras/simmons.png)
 
 ### Purpose
 simmons computes tree shape statistics of trees in Newick format.
