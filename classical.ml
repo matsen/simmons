@@ -72,10 +72,10 @@ let nc_subtree_map f t =
   let rec aux t =
     match t with
       | Btree.Node(l,r) ->
-	  if (is_leaf l) && (is_leaf r) then
-	    [] (* it's a cherry *)
-	  else
-	    (f t)::((aux l) @ (aux r))
+          if (is_leaf l) && (is_leaf r) then
+            [] (* it's a cherry *)
+          else
+            (f t)::((aux l) @ (aux r))
       | Btree.Leaf -> []
   in
   aux t

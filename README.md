@@ -11,22 +11,22 @@ simmons is a command-line program. It can take tree files as arguments or accept
 First the basic use. We "pipe" the output of simmons using the character | to column which aligns it nicely:
 
     [w:~/trees]$ ./simmons -c sample.tre | column -t
-    #name   I_c        N_bar    I_2       B_1      B_2      Var_N     Q_1        cherries  A_1        A_2
-    test0  0.194444   3.5      0.34375   5.58333  3.1875   0.65      0.0535714  4         0.143155   0.296448
-    test1  0.321637   5.85     0.485209  10.5512  2.76953  3.9275    0.199617   7         1.49763    -0.223209
-    test2  0.0713255  8.26     0.523566  49.5544  5.22461  4.9124    0.170084   30        -0.873295  0.35144
-    test3  0.179803   5.96667  0.622722  13.9218  4.13867  3.89889   0.508773   8         -1.37958   0.55414
-    test4  0.333333   3        0.386667  3.83333  2.625    0.571429  -0.133333  3         5.69376    -1.60146
+    #name   I_c        N_bar    I_2       B_1      B_2      Var_N     Q_1        cherries
+    test0  0.194444   3.5      0.34375   5.58333  3.1875   0.65      0.0535714  4
+    test1  0.321637   5.85     0.485209  10.5512  2.76953  3.9275    0.199617   7
+    test2  0.0713255  8.26     0.523566  49.5544  5.22461  4.9124    0.170084   30
+    test3  0.179803   5.96667  0.622722  13.9218  4.13867  3.89889   0.508773   8
+    test4  0.333333   3        0.386667  3.83333  2.625    0.571429  -0.133333  3
 
 Here is the same example showing how simmons accepts input from stdin:
 
     [w:~/trees]$ cat sample.tre | ./simmons -c | column -t
-    #name   I_c        N_bar    I_2       B_1      B_2      Var_N     Q_1        cherries  A_1        A_2
-    test0  0.194444   3.5      0.34375   5.58333  3.1875   0.65      0.0535714  4         0.143155   0.296448
-    test1  0.321637   5.85     0.485209  10.5512  2.76953  3.9275    0.199617   7         1.49763    -0.223209
-    test2  0.0713255  8.26     0.523566  49.5544  5.22461  4.9124    0.170084   30        -0.873295  0.35144
-    test3  0.179803   5.96667  0.622722  13.9218  4.13867  3.89889   0.508773   8         -1.37958   0.55414
-    test4  0.333333   3        0.386667  3.83333  2.625    0.571429  -0.133333  3         5.69376    -1.60146
+    #name   I_c        N_bar    I_2       B_1      B_2      Var_N     Q_1        cherries
+    test0  0.194444   3.5      0.34375   5.58333  3.1875   0.65      0.0535714  4
+    test1  0.321637   5.85     0.485209  10.5512  2.76953  3.9275    0.199617   7
+    test2  0.0713255  8.26     0.523566  49.5544  5.22461  4.9124    0.170084   30
+    test3  0.179803   5.96667  0.622722  13.9218  4.13867  3.89889   0.508773   8
+    test4  0.333333   3        0.386667  3.83333  2.625    0.571429  -0.133333  3
 
 Of course, the main reason one might want to use simmons is to evaluate some BRTSS statistics, which are described in this paper. This is done with -f like so:
 

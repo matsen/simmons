@@ -70,8 +70,8 @@ struct
     else if y < 0 then 0
     else
       let rec aux n =
-	if n = 0 then 1
-	else x * (aux (n-1))
+        if n = 0 then 1
+        else x * (aux (n-1))
       in
       aux y
   let indic x y =

@@ -36,7 +36,7 @@ let write_stats tl =
   List.iter (
     fun (name,t) ->
       if !print_treenames then
-	Printf.printf "%s\t" name;
+        Printf.printf "%s\t" name;
       print_list "%g\t" (List.map (fun f -> f t) stat_funs)
   ) tl;
   ()
@@ -54,7 +54,7 @@ let process_file file name =
     if not !run_together then (
       print_file_name ();
       if !print_treenames then
-	print_string "#name\t";
+        print_string "#name\t";
       print_list "%s\t" stat_names;
     );
     write_stats (Btree.tree_list_of_newick_channel file);
